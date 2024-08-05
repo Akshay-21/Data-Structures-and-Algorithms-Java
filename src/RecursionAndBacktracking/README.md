@@ -50,3 +50,13 @@ For this example, if we call the print function with n=4, visually our memory as
 look like:
 
 ![img.png](assets_images/printrecursive.png)
+
+### Fibonacci Series
+
+```
+Using Recursive
+int a = 0;
+int b = 1;
+int n = 7
+fib = 0 1 1 2 3 5 8 13;
+```
