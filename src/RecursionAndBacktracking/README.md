@@ -64,9 +64,16 @@ fib = 0 1 1 2 3 5 8 13;
 ### Tower Of Hanoi - Using Recursion
 
 ```
+Using Recursive
 int n = 3;
-
 char fromRod = 'A';
 char toRod = 'C';
 char auxRod = 'B';
+```
+
+### Check whether the array is in sorted order.
+#### Using Iterative approach
+```
+int n = 6;
+int[] a = new int[]{3, 6, 4, 7, 8, 9};
 ```
