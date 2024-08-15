@@ -71,9 +71,58 @@ char toRod = 'C';
 char auxRod = 'B';
 ```
 
-### Check whether the array is in sorted order.
+### 1.0 Check whether the array is in sorted order.
 #### Using Iterative approach
 ```
 int n = 6;
 int[] a = new int[]{3, 6, 4, 7, 8, 9};
 ```
+
+### Iterative approach
+#### The steps in the iterative approach are as follows.
+```
+    If the length of the array is zero or one, then the array is sorted.
+
+    Start looping from the first element.
+
+    Compare every two elements.
+
+    a. If the two elements are sorted, move to the next element, i.e., i+1.
+
+    b. Otherwise it will return false, which indicates that the array is not sorted.
+
+    The loop will eventually come to the end of the array when all the array elements are in sorted order.
+
+    Time Complexity - O(n)
+    Space Complexity - O(1)
+```
+
+### 1.1 Check whether the array is in sorted order.
+#### Using Recursive approach 
+```
+int n = 6;
+int[] a = new int[]{3, 6, 4, 7, 8, 9};
+
+```
+
+## Recursive approach
+
+<p>The base case for this approach is when there is zero or one element left for comparison.</p>
+
+### The steps in this approach are as follows.
+
+```
+    Return true when the size of the array becomes zero or one.
+
+    Check the last two elements of the array.
+
+    a. If the last two elements are sorted, perform a recursive call with the previous element, i.e., n-1.
+
+    b. If it returns false, that indicates the array is not sorted.
+
+    The recursion will eventually fall to step 1 when all the array elements are in sorted order.
+
+    Time Complexity - O(n)
+    Space Complexity - O(n) (Considering the recursive call stack)
+```
+
