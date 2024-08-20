@@ -46,8 +46,8 @@ purpose, we need to differentiate their usage. That means in which cases arrays 
 in which cases linked lists are suitable.
 </p>
 
-
 #### Advantages of Linked Lists
+
 Linked lists have both advantages and disadvantages. The advantage of linked lists is that they can
 be expanded in constant time. To create an array, we must allocate memory for a certain number
 of elements. To add more elements to the array when full, we must create a new array and copy
@@ -58,9 +58,25 @@ and add on new elements easily without the need to do any copying and reallocati
 
 ### Singly Linked Lists
 
-  Basic Operations on a List
-  • Traversing the list
-  • Inserting an item in the list
-  • Deleting an item from the list
+Basic Operations on a List
+• Traversing the list
+• Inserting an item in the list
+• Deleting an item from the list
 
 ### Singly Linked List Insertion
+
+1. Insert a new node at the end OR append node into the list.
+```
+e.g.
+10, 20, 30 , 40
+append 50
+10, 20, 30, 40, 50
+```
+
+2. Inserting a new node before the head (at the beginning)
+```
+e.g.
+10, 20, 30 , 40
+insertBeforeHead 80
+80, 10, 20, 30, 40, 50
+```

@@ -16,7 +16,10 @@ public class LinkedList {
         System.out.println();
         linkedList.delete(20);
         linkedList.display();
+        System.out.println("Length of LinkedList: " + linkedList.listLength());
 
+        linkedList.insertAtBeginning(80);
+        linkedList.display();
         System.out.println("Length of LinkedList: " + linkedList.listLength());
     }
 
@@ -33,6 +36,17 @@ public class LinkedList {
             }
             currentNode.setListNode(newNode);
         }
+    }
+
+    //    Inserting a new node before the head (at the beginning)
+    public void insertAtBeginning(int data) {
+        ListNode newNode = new ListNode(data);
+        if (head == null) {
+            head = newNode;
+        }
+        ListNode currentNode = head;
+        head = newNode;
+        newNode.setListNode(currentNode);
     }
 
     public void delete(int data) {
