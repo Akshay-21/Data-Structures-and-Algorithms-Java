@@ -80,3 +80,11 @@ e.g.
 insertBeforeHead 80
 80, 10, 20, 30, 40, 50
 ```
+
+3. Inserting a new node at the middle of the list (random location)
+```
+e.g.
+10, 20, 30 , 40
+insert in middle 60
+10, 20, 30, 60, 40, 50
+```

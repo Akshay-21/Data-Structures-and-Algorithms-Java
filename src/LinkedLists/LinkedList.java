@@ -1,24 +1,39 @@
 package LinkedLists;
 
+import org.w3c.dom.NodeList;
+
+import javax.xml.soap.Node;
+import java.util.List;
+
 public class LinkedList {
 
+    private static LinkedList linkedList;
     ListNode head;
 
     public static void main(String[] args) {
-        LinkedList linkedList = new LinkedList();
+        linkedList = new LinkedList();
         linkedList.insert(10);
         linkedList.insert(20);
         linkedList.insert(30);
         linkedList.insert(40);
-        linkedList.display();
+        linkedList.insert(50);
+//        linkedList.display();
         int length = linkedList.listLength();
-        System.out.println("Length of LinkedList: " + length);
+
+      /*  System.out.println("Length of LinkedList: " + length);
         System.out.println();
         linkedList.delete(20);
         linkedList.display();
-        System.out.println("Length of LinkedList: " + linkedList.listLength());
+        System.out.println("Length of LinkedList: " + linkedList.listLength());*/
 
-        linkedList.insertAtBeginning(80);
+        System.out.println("==============================================");
+
+       /* linkedList.insertAtBeginning(80);
+        linkedList.display();
+        System.out.println("Length of LinkedList: " + linkedList.listLength());*/
+
+        System.out.println("==============================================");
+        linkedList.insertElementInMiddleList(60);
         linkedList.display();
         System.out.println("Length of LinkedList: " + linkedList.listLength());
     }
@@ -48,6 +63,33 @@ public class LinkedList {
         head = newNode;
         newNode.setListNode(currentNode);
     }
+
+    //    Inserting a new node at the middle of the list (random location)
+     /*
+        e.g.
+        10, 20, 30, 40, 50
+        insert in middle 60
+        10, 20, 30, 60, 40, 50
+        */
+    public void insertElementInMiddleList(int data) {
+        ListNode newNode = new ListNode(data);
+        if (head == null) {
+            head = newNode;
+        }
+
+        ListNode currentNode = head;
+
+        int length = linkedList.listLength();
+        int middle = (length / 2);
+
+        for (int i = 0; i < middle; i++) {
+            currentNode = currentNode.getListNode();
+        }
+
+        newNode.setListNode(currentNode.getListNode());
+        currentNode.setListNode(newNode);
+    }
+
 
     public void delete(int data) {
         if (head == null) {
