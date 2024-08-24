@@ -17,6 +17,9 @@ public class LinkedList {
         linkedList.insert(30);
         linkedList.insert(40);
         linkedList.insert(50);
+        linkedList.insert(60);
+        linkedList.insert(70);
+        linkedList.insert(80);
 //        linkedList.display();
         int length = linkedList.listLength();
 
@@ -32,8 +35,15 @@ public class LinkedList {
         linkedList.display();
         System.out.println("Length of LinkedList: " + linkedList.listLength());*/
 
-        System.out.println("==============================================");
+       /* System.out.println("==============================================");
         linkedList.insertElementInMiddleList(60);
+        linkedList.display();
+        System.out.println("Length of LinkedList: " + linkedList.listLength());*/
+
+        System.out.println("==============================================");
+
+        linkedList.insertElementSpecificPositionInList(150, 7);
+
         linkedList.display();
         System.out.println("Length of LinkedList: " + linkedList.listLength());
     }
@@ -90,6 +100,34 @@ public class LinkedList {
         currentNode.setListNode(newNode);
     }
 
+    //    Inserting a new node at the middle of the list (random location)
+    public void insertElementSpecificPositionInList(int data, int position) {
+        ListNode newNode = new ListNode(data);
+        // Edge case: Insert at the head (position 0)
+        if (position == 0) {
+            head = newNode;
+        }
+
+        // Traverse to the node just before the desired position
+        ListNode currentNode = head;
+        int count = 0;
+
+        // Find the node just before the target position
+        while (currentNode != null && count < position - 1) {
+            count++;
+            currentNode = currentNode.getListNode();
+        }
+
+        // If current is null, the position is out of bounds
+        if (currentNode == null) {
+            throw new IndexOutOfBoundsException("Position exceeds the length of the list.");
+        }
+
+        // Insert the new node
+        newNode.setListNode(currentNode.getListNode());
+        currentNode.setListNode(newNode);
+
+    }
 
     public void delete(int data) {
         if (head == null) {

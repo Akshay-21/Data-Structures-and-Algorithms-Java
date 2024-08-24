@@ -66,6 +66,7 @@ Basic Operations on a List
 ### Singly Linked List Insertion
 
 1. Insert a new node at the end OR append node into the list.
+
 ```
 e.g.
 10, 20, 30 , 40
@@ -74,6 +75,7 @@ append 50
 ```
 
 2. Inserting a new node before the head (at the beginning)
+
 ```
 e.g.
 10, 20, 30 , 40
@@ -81,10 +83,20 @@ insertBeforeHead 80
 80, 10, 20, 30, 40, 50
 ```
 
-3. Inserting a new node at the middle of the list (random location)
+3. Inserting a new node at the middle of the list.
+
 ```
 e.g.
-10, 20, 30 , 40
+10, 20, 30 , 40, 50
 insert in middle 60
 10, 20, 30, 60, 40, 50
+```
+
+4. Inserting a new node at the middle of the list (random location)/specific position
+
+```
+e.g.
+10, 20, 30, 40, 50, 60, 70, 80
+insert in middle 120
+10, 20, 30, 40, 50, 60, 120, 70, 80
 ```
