@@ -1,5 +1,6 @@
 package LinkedLists;
 
+import com.sun.xml.internal.ws.assembler.jaxws.TerminalTubeFactory;
 import org.w3c.dom.NodeList;
 
 import javax.xml.soap.Node;
@@ -46,6 +47,12 @@ public class LinkedList {
 
         linkedList.display();
         System.out.println("Length of LinkedList: " + linkedList.listLength());
+
+        System.out.println("==============================================");
+        System.out.println("======================= Find Element =======================");
+        System.out.println();
+
+        System.out.println(linkedList.findElement(40));
     }
 
     //  Inserting the first node and subsequent nodes into the Singly Linked list. (Insert Function)
@@ -127,6 +134,22 @@ public class LinkedList {
         newNode.setListNode(currentNode.getListNode());
         currentNode.setListNode(newNode);
 
+    }
+
+    //      Find/Search Element in the list.
+    public boolean findElement(int data) {
+        if (head == null) {
+            System.out.println("List is Empty!");
+            return false;
+        }
+        ListNode currentNode = head;
+        while (currentNode != null) {
+            if (currentNode.getData() == data) {
+                return true;
+            }
+            currentNode = currentNode.getListNode();
+        }
+        return false;
     }
 
     public void delete(int data) {

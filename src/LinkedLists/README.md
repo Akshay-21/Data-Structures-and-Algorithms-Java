@@ -100,3 +100,13 @@ e.g.
 insert in middle 120
 10, 20, 30, 40, 50, 60, 120, 70, 80
 ```
+
+5. Find/Search Element in the list.
+
+```
+e.g
+find 50 in the list.
+10, 20, 30, 40, 50, 60, 70, 80
+
+result = true/false
+```
