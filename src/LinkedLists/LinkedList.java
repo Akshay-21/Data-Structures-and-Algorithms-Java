@@ -52,7 +52,12 @@ public class LinkedList {
         System.out.println("======================= Find Element =======================");
         System.out.println();
 
-        System.out.println(linkedList.findElement(40));
+        System.out.println(linkedList.findElement(50));
+
+        System.out.println("======================= Find Element with returning value =======================");
+        System.out.println();
+
+        System.out.println(linkedList.findElementWithReturnValue(40));
     }
 
     //  Inserting the first node and subsequent nodes into the Singly Linked list. (Insert Function)
@@ -151,6 +156,24 @@ public class LinkedList {
         }
         return false;
     }
+
+
+    //    Find/Search Element in the list with returning value.
+    public int findElementWithReturnValue(int data) {
+        if (head == null) {
+            System.out.println("List is Empty!");
+            return -1;
+        }
+        ListNode currentNode = head;
+        while (currentNode != null) {
+            if (currentNode.getData() == data) {
+                return currentNode.getData();
+            }
+            currentNode = currentNode.getListNode();
+        }
+        return -1;
+    }
+
 
     public void delete(int data) {
         if (head == null) {

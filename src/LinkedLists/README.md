@@ -110,3 +110,13 @@ find 50 in the list.
 
 result = true/false
 ```
+
+    5.1 Find/Search Element in the list with returning value.
+
+```
+e.g
+find 40 in the list.
+10, 20, 30, 40, 50, 60, 70, 80
+
+result = 40
+```
