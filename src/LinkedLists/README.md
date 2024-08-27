@@ -111,7 +111,7 @@ find 50 in the list.
 result = true/false
 ```
 
-    5.1 Find/Search Element in the list with returning value.
+    5.1 Find/search an element in the list and return its value..
 
 ```
 e.g
@@ -119,4 +119,14 @@ find 40 in the list.
 10, 20, 30, 40, 50, 60, 70, 80
 
 result = 40
+```
+
+    5.2Find/search an element in the list and return its position.
+
+```
+e.g
+find 70 in the list.
+10, 20, 30, 40, 50, 60, 70, 80
+
+result = 6
 ```

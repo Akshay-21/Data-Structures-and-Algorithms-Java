@@ -54,10 +54,14 @@ public class LinkedList {
 
         System.out.println(linkedList.findElement(50));
 
-        System.out.println("======================= Find Element with returning value =======================");
+        System.out.println("======================= Find/search an element in the list and return its value =======================");
         System.out.println();
 
-        System.out.println(linkedList.findElementWithReturnValue(40));
+        System.out.println(linkedList.findElementWithReturnItsValue(40));
+
+        System.out.println("======================= Find/search an element in the list and return its position =======================");
+        System.out.println();
+        System.out.println(linkedList.findElementWithReturnItsPosition(70));
     }
 
     //  Inserting the first node and subsequent nodes into the Singly Linked list. (Insert Function)
@@ -158,8 +162,8 @@ public class LinkedList {
     }
 
 
-    //    Find/Search Element in the list with returning value.
-    public int findElementWithReturnValue(int data) {
+    //    Find/search an element in the list and return its value.
+    public int findElementWithReturnItsValue(int data) {
         if (head == null) {
             System.out.println("List is Empty!");
             return -1;
@@ -170,6 +174,24 @@ public class LinkedList {
                 return currentNode.getData();
             }
             currentNode = currentNode.getListNode();
+        }
+        return -1;
+    }
+
+    //    Find/search an element in the list and return its position.
+    public int findElementWithReturnItsPosition(int data) {
+        int position = 0;
+        if (head == null) {
+            System.out.println("List is Empty!");
+            return -1;
+        }
+        ListNode currentNode = head;
+        while (currentNode != null) {
+            if (currentNode.getData() == data) {
+                return position;
+            }
+            currentNode = currentNode.getListNode();
+            position++;
         }
         return -1;
     }
