@@ -130,3 +130,13 @@ find 70 in the list.
 
 result = 6
 ```
+
+6. Deleting an item from the linked list.
+
+```
+e.g
+find 50 in the list.
+
+10, 20, 30, 40, 60, 70, 150, 80
+
+```

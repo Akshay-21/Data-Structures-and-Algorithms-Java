@@ -1,11 +1,5 @@
 package LinkedLists;
 
-import com.sun.xml.internal.ws.assembler.jaxws.TerminalTubeFactory;
-import org.w3c.dom.NodeList;
-
-import javax.xml.soap.Node;
-import java.util.List;
-
 public class LinkedList {
 
     private static LinkedList linkedList;
@@ -62,6 +56,13 @@ public class LinkedList {
         System.out.println("======================= Find/search an element in the list and return its position =======================");
         System.out.println();
         System.out.println(linkedList.findElementWithReturnItsPosition(70));
+
+
+        System.out.println("======================= Deleting an element from the list. =======================");
+        System.out.println();
+        linkedList.delete(50);
+        linkedList.display();
+
     }
 
     //  Inserting the first node and subsequent nodes into the Singly Linked list. (Insert Function)
